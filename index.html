@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Background Selector</title>
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo">Background Selector</h1>
+      <div class="theme-switch">
+        <ion-icon class="moon" name="moon-outline"></ion-icon>
+        <ion-icon class="sun" name="sunny-outline"></ion-icon>
+      </div>
+      <ul class="nav-links">
+        <li class="nav-link">Home</li>
+        <li class="nav-link">About</li>
+        <li class="nav-link">Contact</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="background-selector">
+        <form>
+          <div class="colors">
+            <div class="first-color">
+              <label for="first-color">First Color: </label>
+              <input type="color" name="first-color" id="first-color" />
+            </div>
+            <div class="second-color">
+              <label for="second-color">Second Color: </label>
+              <input type="color" name="second-color" id="second-color" />
+            </div>
+          </div>
+          <button class="apply-button">Apply</button>
+          <button class="reset-button">Reset Color</button>
+        </form>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

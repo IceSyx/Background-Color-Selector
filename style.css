@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  transition: all 0.3s linear;
+}
+
+nav {
+  height: 7vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 1vh 5vw;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.nav-links {
+  padding: 2.5em 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+.nav-link {
+  padding: 0.7em 2em;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.theme-switch {
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+ion-icon {
+  transition: all 0.5s linear;
+  background: transparent;
+  padding: 0.2em;
+  border-radius: 0.6em;
+}
+
+.sun {
+  display: none;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  cursor: pointer;
+}
+
+.colors {
+  user-select: none;
+  margin: 1em;
+  padding: 1.5em;
+  border: 1px solid black;
+  border-radius: 3vh;
+}
+
+#first-color,
+#second-color {
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+.apply-button {
+  user-select: none;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 2vh;
+  transition: all 0.2s linear;
+  margin-bottom: 0.2em;
+}
+
+.apply-button:hover {
+  transform: scale(1.2);
+}
+
+.reset-button {
+  user-select: none;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 2vh;
+  transition: all 0.2s linear;
+}
+
+.reset-button:hover {
+  transform: scale(1.2);
+}
