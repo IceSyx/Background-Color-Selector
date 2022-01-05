@@ -14,13 +14,13 @@ let isBlack = false;
 let isWhite = true;
 
 //  Events Listeners
-moon.addEventListener("click", changeToLight);
-sun.addEventListener("click", changeToDark);
+moon.addEventListener("click", changeToDark);
+sun.addEventListener("click", changeToLight);
 applyButton.addEventListener("click", applyBackground);
 resetButton.addEventListener("click", resetColor);
 
 // Functions
-function changeToLight() {
+function changeToDark() {
   colors.style.border = "1px solid white";
   applyButton.style.border = "2px solid white";
   applyButton.style.color = "white";
@@ -34,7 +34,7 @@ function changeToLight() {
   isWhite = true;
 }
 
-function changeToDark() {
+function changeToLight() {
   colors.style.border = "1px solid black";
   applyButton.style.border = "2px solid black";
   applyButton.style.color = "black";
@@ -51,12 +51,20 @@ function changeToDark() {
 function applyBackground(e) {
   e.preventDefault();
   body.style.background = `linear-gradient(to right, ${firstColor.value}, ${secondColor.value})`;
+  checkColor();
 }
 
 function resetColor(e) {
   e.preventDefault();
   body.style.background = "white";
   body.style.color = "black";
-  firstColor.value = "black";
-  secondColor.value = "black";
+  firstColor.value = "#000000";
+  secondColor.value = "#000000";
+  colors.style.border = "1px solid black";
+  resetButton.style.border = "2px solid black";
+  resetButton.style.color = "black";
+  applyButton.style.border = "2px solid black";
+  applyButton.style.color = "black";
 }
+
+function checkColor() {}
