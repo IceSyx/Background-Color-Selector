@@ -8,6 +8,7 @@ const resetButton = document.querySelector(".reset-button");
 const firstColor = document.querySelector("#first-color");
 const secondColor = document.querySelector("#second-color");
 const colors = document.querySelector(".colors");
+const randomizeButton = document.querySelector(".randomize-btn");
 
 // Colors Variables
 let isBlack = false;
@@ -18,6 +19,7 @@ moon.addEventListener("click", changeToDark);
 sun.addEventListener("click", changeToLight);
 applyButton.addEventListener("click", applyBackground);
 resetButton.addEventListener("click", resetColor);
+randomizeButton.addEventListener("click", randomizeColor);
 
 // Functions
 function changeToDark() {
@@ -65,6 +67,15 @@ function resetColor(e) {
   resetButton.style.color = "black";
   applyButton.style.border = "2px solid black";
   applyButton.style.color = "black";
+}
+
+function randomizeColor(e) {
+  e.preventDefault();
+  randomizeButton.classList.add("clicked");
+  firstColor.value =
+    "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+  secondColor.value =
+    "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
 }
 
 function checkColor() {}

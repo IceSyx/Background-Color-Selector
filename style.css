@@ -78,6 +78,11 @@ input {
 }
 
 .colors {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   user-select: none;
   margin: 1em;
   padding: 1.5em;
@@ -117,4 +122,20 @@ input {
 
 .reset-button:hover {
   transform: scale(1.2);
+}
+
+.randomize-btn {
+  cursor: pointer;
+  font-size: 2.3em;
+  transition: all 0.3s ease;
+}
+
+.clicked {
+  animation: Bounce 0.5s linear;
+}
+
+@keyframes bounce {
+  to {
+    font-size: 2.6em;
+  }
 }
